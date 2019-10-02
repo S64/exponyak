@@ -53,7 +53,7 @@ namespace ExPonyak
             }
 
             // 翻訳対象として、最初のメンションを取り除く
-            var origin = turnContext.Activity.Text.Substring(parts[0].Length);
+            var origin = turnContext.Activity.Text.Substring(parts[0].Length + 1);
 
             var result = await translator.TranslateWithRetranslate(
                 query: origin,
